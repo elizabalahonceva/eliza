@@ -260,3 +260,63 @@ console.log(str); */
 /* const arr = ['a', 'd', 'c', 'b'];
 arr.sort();
 console.log(arr); */
+
+// Копирование объекта - for in
+/* function copy(mainObject) {
+    let newObject = {};
+    for (let key in mainObject) {
+        newObject[key] = mainObject[key];
+    }
+
+    return newObject;
+}
+
+const numbers = {
+    a: 1,
+    b: 2,
+    c: {
+        x:10,
+        y: 20
+    }
+};
+
+const newNumbers = copy(numbers);
+newNumbers.a = 10;
+
+console.log(newNumbers);
+console.log(numbers); */
+
+
+// Копирование объекта с помощью slice()
+/* const numbers = {
+    a: 2,
+    b: 4
+};
+
+const newNumbers = Object.assign({}, numbers);
+
+newNumbers.a = 10;
+
+console.log(newNumbers);
+console.log(numbers); */
+
+// копирование массива с помощью spread
+/* const array = [1, 2, 3];
+const newArray = [...array];
+
+newArray[1] = 10;
+
+console.log(array);
+console.log(newArray); */
+
+// копирование объекта с помощью spread
+const obj = {
+    one: 1,
+    two: 2
+};
+
+const newObj = {...obj};
+newObj.one = 10;
+
+console.log(obj);
+console.log(newObj);
